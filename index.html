@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify web Interface</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+    <link rel="icon" href="favicon.ico" type="image/png">
+</head>
+
+<body>
+    <div class="container bg-black FLEX">
+        <div class="left">
+            <div class="home p-1 bg-grey ">
+                <div class="logo p-1 "><img class="invert" src="images/logo.svg" alt="logo"><img class="invert exit"
+                        src="images/exit.svg" alt="exit"></div>
+                <ul>
+                    <li class="p-1"><img class="invert" src="images/home.svg" alt="home">Home</li>
+                    <li class="p-1"><img class="invert" src="images/search.svg" alt="search">Search</li>
+                </ul>
+            </div>
+            <div class="library bg-grey  ">
+                <div class="head">
+                    <img class="invert" src="images/library.svg" alt="library">
+                    <h3>Your Library</h3>
+                </div>
+                <div class="songlist ">
+                    <ul>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="footer p-1">
+                <a href="https://www.spotify.com/in-en/legal/"><span>Legal</span></a>
+                <a href="https://www.spotify.com/in-en/safetyandprivacy/"><span>Center</span></a>
+                <a href="https://www.spotify.com/in-en/legal/privacy-policy/"><span>Policy</span></a>
+                <a href="https://www.spotify.com/in-en/legal/cookies-policy/"><span>Cookies</span></a>
+                <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3"><span>Ads</span></a>
+                <a href="https://www.spotify.com/legal/cookies-policy/" target="_blank"
+                    rel="noopener"><span>Cookies</span></a>
+            </div>
+        </div>
+
+        <div class="right  bg-grey ">
+            <div class="header">
+                <div class="hamburger"><img class="invert" src="images/hamburger.svg" alt="hamburger">
+                </div>
+                <div class="nav">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffff"
+                        fill="none">
+                        <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18" stroke="#ffffff"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffff"
+                        fill="none">
+                        <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="#ffffff"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </div>
+                <div class="button">
+                    <button class="btn1">Sign Up</button>
+                    <button class="btn2">Log in</button>
+                </div>
+            </div>
+            <div class="Spotify-playlist ">
+                <h2>Spotify playlists</h2>
+                <div class="Cardcontainer">
+
+
+                </div>
+            </div>
+            <div class="playbar">
+                <div class="moveahead">
+                    <div class="time invert">00:00</div>
+                    <div class="seekbar">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="duration invert">00:00</div>
+                </div>
+                <div class="musicbar">
+                    <div class="songname"></div>
+                    <div class="songbuttons">
+                        <img id="previous" src="images/previous.svg" alt="previous">
+                        <img id="play" src="images/playnow.svg" alt="play">
+                        <img id="next" src="images/next.svg" alt="next">
+                    </div>
+                    <div class="controls"><button class="btnall"><img class="repeat" src="images/repeat.svg"
+                                alt="repeat"></button>
+                        <button class="btnall"><img class="shuffle" src="images/shuffle.svg" alt="shuffle"></button>
+                        <div class="above">
+                            <button class="btnall"><img class="volume" src="images/volume.svg" alt="volume"></button>
+                            <input class="range" type="range" name="range" min="0" value="70" max="100" height="10">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
