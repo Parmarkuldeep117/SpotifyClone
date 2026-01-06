@@ -249,56 +249,53 @@ async function main() {
             }
         }
     })
+let repeatbtn = document.querySelector(".repeat");
+let shufflebtn = document.querySelector(".shuffle");
 
-    let repeatbtn = document.querySelector(".repeat")
-    let isRepeat = false;
-    repeatbtn.addEventListener("click", () => {
-        isRepeat = !isRepeat;
-        repeatbtn.classList.toggle("active", isRepeat)
+let isRepeat = false;
+let isShuffle = false;
 
-        currentsong.addEventListener("ended", () => {
-            if (isRepeat) {
-                currentsong.currentTime = "0"
-                currentsong.play();
-            }
-            else {
-                let parts = currentsong.src.split("/");
-                let currentSongName = decodeURIComponent(parts[parts.length - 1]);
-                let index = songs.indexOf(currentSongName);
-                if (index < songs.length - 1) {
-                    playmusic(songs[index + 1])
-                }
-                else {
-                    playmusic(songs[0])
-                }
-            }
-        })
-    })
+// Repeat toggle
+repeatbtn.addEventListener("click", () => {
+    isRepeat = !isRepeat;
+    repeatbtn.classList.toggle("active", isRepeat);
+});
 
-    let Shufflebtn = document.querySelector(".shuffle")
-    let isShuffle = false
-    Shufflebtn.addEventListener("click", () => {
-        isShuffle = !isShuffle
-        Shufflebtn.classList.toggle("active", isShuffle)
+// Shuffle toggle
+shufflebtn.addEventListener("click", () => {
+    isShuffle = !isShuffle;
+    shufflebtn.classList.toggle("active", isShuffle);
+});
 
-    })
-    currentsong.addEventListener("ended", () => {
-        if (isShuffle) {
-            let randomindex = Math.floor(Math.random() * songs.length)
-            playmusic(songs[randomindex])
-        }
-        else {
-            let parts = currentsong.src.split("/");
-            let currentSongName = decodeURIComponent(parts[parts.length - 1]);
-            let index = songs.indexOf(currentSongName);
-            if (index < songs.length - 1) {
-                playmusic(songs[index + 1])
-            }
-            else {
-                playmusic(songs[0])
-            }
-        }
-    })
+// ONE ended listener
+currentsong.addEventListener("ended", () => {
+
+    // 1️⃣ Repeat has highest priority
+    if (isRepeat) {
+        currentsong.currentTime = 0;
+        currentsong.play();
+        return;
+    }
+
+    // 2️⃣ Shuffle
+    if (isShuffle) {
+        let randomIndex = Math.floor(Math.random() * songs.length);
+        playmusic(songs[randomIndex]);
+        return;
+    }
+
+    // 3️⃣ Normal next song
+    let parts = currentsong.src.split("/");
+    let currentSongName = decodeURIComponent(parts[parts.length - 1]);
+    let index = songs.indexOf(currentSongName);
+
+    if (index < songs.length - 1) {
+        playmusic(songs[index + 1]);
+    } else {
+        playmusic(songs[0]);
+    }
+});
+
 
     let Volume = document.querySelector(".volume")
     let Range = document.querySelector(".range")

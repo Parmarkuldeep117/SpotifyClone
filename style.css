@@ -76,9 +76,12 @@ body {
     width: 300px;
 }
 
+.rplay{
+    margin-left: auto;
+}
 .songlist ul li {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     list-style: none;
     font-size: 12px;
     gap: 15px;
@@ -86,7 +89,7 @@ body {
     border: 1px solid white;
     border-radius: 8px;
     /* padding: 10px; */
-    width: 290px;
+    width: 260px;
     margin: 3px;
 }
 
@@ -101,7 +104,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 4px;
-    margin-left: 5px;
+    margin-left: auto;
     /* padding-top: 8px; */
     /* font-size: 15px ; */
 }
