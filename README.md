@@ -30,13 +30,13 @@ This project focuses on UI, audio controls, and playlist handling.
 ## 📸 Screenshots
 
 ### 🏠 Home
-![Home](screenshots/home.png)
+![Home](screenshots/home-page.png)
 
 ### 🎶 Playlist
-![Playlist](screenshots/playlist.png)
+![Playlist](screenshots/songs-library.png)
 
 ### ▶️ Player
-![Player](screenshots/player.png)
+![Player](screenshots/volume.png)
 
 ---
 
