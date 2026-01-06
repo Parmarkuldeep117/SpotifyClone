@@ -33,7 +33,7 @@ This project focuses on UI, audio controls, and playlist handling.
 ![Home](screenshots/home-page.png)
 
 ### 🎶 Playlist
-![Playlist](screenshots/songs-library.png)
+![Playlist](screenshots/playlist.png)
 
 ### ▶️ Player
 ![Player](screenshots/volume.png)
